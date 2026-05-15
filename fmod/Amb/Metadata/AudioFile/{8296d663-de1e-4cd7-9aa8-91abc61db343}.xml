@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{8296d663-de1e-4cd7-9aa8-91abc61db343}">
+		<property name="assetPath">
+			<value>zamykanie.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3270068027210884</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b1c7340b-8664-4a2d-aad6-ee3cf65cf4b1}</destination>
+		</relationship>
+	</object>
+</objects>
