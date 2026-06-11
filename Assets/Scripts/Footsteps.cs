@@ -40,11 +40,12 @@ public class Footsteps : MonoBehaviour
         {
             PlayJump();
         }
+        HandleFootsteps();
     }
 
     void FixedUpdate()
     {
-        HandleFootsteps();
+      
     }
 
     /// <summary>
@@ -53,11 +54,13 @@ public class Footsteps : MonoBehaviour
     private void HandleFootsteps()
     {
         // Sprawdza, czy gracz się porusza.
-        bool isMoving = (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0);
+       
         // Sprawdza, czy gracz biegnie.
+        CharacterController controller = GetComponent<CharacterController>();
+        bool isMoving = (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) && IsGrounded();
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
 
-        if (isMoving && IsGrounded())
+        if (isMoving)
         {
             // Ustawia interwał na podstawie tego, czy gracz biegnie.
             float footstepInterval = isRunning ? 0.25f : 0.5f;
@@ -78,8 +81,7 @@ public class Footsteps : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 0.5f))
         {
-            string surfaceTag = hit.collider.tag;
-            PlaySurfaceSound(footstepsSoundInstance, footstepsEvent, surfaceTag);
+          FMODUnity.RuntimeManager.PlayOneShot(footstepsEvent, transform.position);
         }
     }
 
