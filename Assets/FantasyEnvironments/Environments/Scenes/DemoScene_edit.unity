@@ -2757,11 +2757,11 @@ MonoBehaviour:
     Path: event:/wood jump
   landEvent:
     Guid:
-      Data1: 1646699011
-      Data2: 1272124246
-      Data3: -532926810
-      Data4: -621570698
-    Path: event:/wood jump
+      Data1: 57643328
+      Data2: 1153805191
+      Data3: -1831568464
+      Data4: -1736751284
+    Path: event:/stone_jump
   isGrounded: 1
   isJumping: 1
 --- !u!114 &613997996

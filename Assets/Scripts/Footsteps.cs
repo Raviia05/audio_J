@@ -19,13 +19,13 @@ public class Footsteps : MonoBehaviour
     // Usunięto: private Dictionary<string, string> surfaceTags;
 
     private float lastFootstepTime = 0f;
-    private float distToGround;
+    private float distToGround = 2f;
 
     [SerializeField]
     private bool isGrounded = true;
     [SerializeField]
     private bool isJumping = false;
-
+    private float jumpCooldownTimer = 0f;
     void Start()
     {
         distToGround = GetComponent<Collider>().bounds.extents.y;
@@ -36,13 +36,20 @@ public class Footsteps : MonoBehaviour
     void Update()
     {
         // Sprawdza, czy gracz skacze, używając spacji.
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (jumpCooldownTimer > 0f)
+        {
+            jumpCooldownTimer -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCooldownTimer <= 0f)
         {
             PlayJump();
+            jumpCooldownTimer = 0.5f;
+            isJumping = true; 
         }
+
         HandleFootsteps();
     }
-
     void FixedUpdate()
     {
       
@@ -90,7 +97,7 @@ public class Footsteps : MonoBehaviour
     /// </summary>
     private void PlayJump()
     {
-        if (IsGrounded())
+        if (isJumping)
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 0.5f))
@@ -98,9 +105,11 @@ public class Footsteps : MonoBehaviour
                 string surfaceTag = hit.collider.tag;
                 PlaySurfaceSound(jumpSoundInstance, jumpEvent, surfaceTag);
             }
-            isGrounded = false;
-            isJumping = true;
+            isGrounded = true;
+            //isJumping = false;
         }
+       
+        
     }
 
     /// <summary>
@@ -110,14 +119,14 @@ public class Footsteps : MonoBehaviour
     {
         if (!isGrounded && isJumping)
         {
-            PlayLanding();
+           PlayLanding();
         }
     }
 
     /// <summary>
     /// Odtwarza dźwięk lądowania.
     /// </summary>
-    private void PlayLanding()
+   private void PlayLanding()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 0.5f))
@@ -125,8 +134,8 @@ public class Footsteps : MonoBehaviour
             string surfaceTag = hit.collider.tag;
             PlaySurfaceSound(landSoundInstance, landEvent, surfaceTag);
         }
-        isGrounded = true;
-        isJumping = false;
+       isGrounded = true;
+       isJumping = false;
     }
 
     /// <summary>

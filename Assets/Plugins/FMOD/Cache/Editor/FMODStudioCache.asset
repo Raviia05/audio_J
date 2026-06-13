@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: fmod/Amb/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639167685505270416
+  lastModified: 639168736839438996
   FileSizes:
   - Name: Desktop
     Value: 1244
@@ -215,7 +215,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -8209092207714578416}
   cacheVersion: 131859
-  cacheTime: 639167685505270416
+  cacheTime: 639168736839438996
   SerializableEventsDict:
   - key: event:/wood jump
     index: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   Path: fmod/Amb/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639167685505184553
+  lastModified: 639168736839438996
   FileSizes:
   - Name: Desktop
     Value: 8807040
