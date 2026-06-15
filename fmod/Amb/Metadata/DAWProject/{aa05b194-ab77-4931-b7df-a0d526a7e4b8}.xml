@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DAWProject" id="{aa05b194-ab77-4931-b7df-a0d526a7e4b8}">
+		<property name="assetPath">
+			<value>stone landing.rpp.link/</value>
+		</property>
+		<property name="dawProjectPath">
+			<value>C:/Users/jbrych/Desktop/stone landing.rpp</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b1c7340b-8664-4a2d-aad6-ee3cf65cf4b1}</destination>
+		</relationship>
+	</object>
+</objects>

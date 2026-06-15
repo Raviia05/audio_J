@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DAWAsset" id="{bad11e6a-fa39-4e9d-9aed-59f7c839a971}">
+		<property name="assetPath">
+			<value>stone landing.rpp.link/wood_landing.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b1c7340b-8664-4a2d-aad6-ee3cf65cf4b1}</destination>
+		</relationship>
+		<relationship name="project">
+			<destination>{aa05b194-ab77-4931-b7df-a0d526a7e4b8}</destination>
+		</relationship>
+	</object>
+</objects>

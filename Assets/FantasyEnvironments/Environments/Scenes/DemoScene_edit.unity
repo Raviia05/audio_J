@@ -2540,6 +2540,7 @@ GameObject:
   - component: {fileID: 613997994}
   - component: {fileID: 613997996}
   - component: {fileID: 613997995}
+  - component: {fileID: 613997997}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2754,16 +2755,16 @@ MonoBehaviour:
       Data2: 1272124246
       Data3: -532926810
       Data4: -621570698
-    Path: event:/wood jump
+    Path: event:/wood_jump
   landEvent:
     Guid:
-      Data1: 57643328
-      Data2: 1153805191
-      Data3: -1831568464
-      Data4: -1736751284
-    Path: event:/stone_jump
-  isGrounded: 1
-  isJumping: 1
+      Data1: -887325511
+      Data2: 1331975592
+      Data3: 959739539
+      Data4: -208859024
+    Path: event:/wood_landing
+  isGrounded: 0
+  isJumping: 0
 --- !u!114 &613997996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2795,6 +2796,26 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &613997997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613997984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d95e26b5cbbe94f93658dcf4aa33cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outside_foot_switch
+  snapshotActivated: 0
+  outsideSnapshot:
+    Guid:
+      Data1: -428721520
+      Data2: 1085982809
+      Data3: 861476537
+      Data4: -1419942731
+    Path: snapshot:/las
 --- !u!1 &688602384
 GameObject:
   m_ObjectHideFlags: 0
