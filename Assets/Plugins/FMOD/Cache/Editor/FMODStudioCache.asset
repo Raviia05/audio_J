@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8373403062213188022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jump/Surface3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Surface3
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1858257495
+    data2: 3277373012
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Wood
+  - Stone
+  Exists: 1
 --- !u!114 &-8209092207714578416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +41,10 @@ MonoBehaviour:
   Path: fmod/Amb/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639171271189171021
+  lastModified: 639173094852390489
   FileSizes:
   - Name: Desktop
-    Value: 1434
+    Value: 1502
   Exists: 1
 --- !u!114 &-6343781568871718967
 MonoBehaviour:
@@ -41,7 +67,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 2322267542698114637}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -74,7 +100,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
---- !u!114 &-5055355612297402751
+--- !u!114 &-5093243896920432028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,63 +110,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/stone_jump
+  m_Name: event:/Footsteps
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/stone_jump
-  Guid:
-    Data1: 57643328
-    Data2: 1153805191
-    Data3: -1831568464
-    Data4: -1736751284
-  Banks:
-  - {fileID: 2322267542698114637}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1327
---- !u!114 &-4502297681503043805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/wood_landing
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/wood_landing
-  Guid:
-    Data1: -887325511
-    Data2: 1331975592
-    Data3: 959739539
-    Data4: -208859024
-  Banks:
-  - {fileID: 2322267542698114637}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3027435275055657369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/wood_footsteps
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/wood_footsteps
+  Path: event:/Footsteps
   Guid:
     Data1: -1287843039
     Data2: 1180615994
@@ -151,7 +123,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 8926088469279570165}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -182,7 +155,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1327
---- !u!114 &-2023874918015179525
+--- !u!114 &-891586564344606867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,24 +165,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/stone_landing
+  m_Name: event:/Landing
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/stone_landing
+  Path: event:/Landing
   Guid:
-    Data1: 911871205
-    Data2: 1303719572
-    Data3: -2023370583
-    Data4: 352137960
+    Data1: -887325511
+    Data2: 1331975592
+    Data3: 959739539
+    Data4: -208859024
   Banks:
   - {fileID: 2322267542698114637}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -470262623235718949}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-1923008094546454155
+--- !u!114 &-470262623235718949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,24 +192,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/las
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: snapshot:/las
-  Guid:
-    Data1: -428721520
-    Data2: 1085982809
-    Data3: 861476537
-    Data4: -1419942731
-  Banks:
-  - {fileID: 2322267542698114637}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landing/Surface2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Surface2
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2396468845
+    data2: 2222787004
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Wood
+  - Stone
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,56 +226,50 @@ MonoBehaviour:
   - {fileID: 2322267542698114637}
   EditorEvents:
   - {fileID: -2567610567898495659}
-  - {fileID: -3027435275055657369}
-  - {fileID: -5055355612297402751}
   - {fileID: 7313548639330664275}
   - {fileID: 7687223890057435663}
   - {fileID: 7915238172843675787}
   - {fileID: 4462956597671817595}
   - {fileID: -6064241809579592013}
   - {fileID: -6343781568871718967}
-  - {fileID: 2571110061750997914}
-  - {fileID: 425375485793814078}
-  - {fileID: -1923008094546454155}
-  - {fileID: -4502297681503043805}
-  - {fileID: -2023874918015179525}
+  - {fileID: -5093243896920432028}
+  - {fileID: -891586564344606867}
+  - {fileID: 3445674151842523741}
+  - {fileID: 1070871704879095963}
+  - {fileID: 1982639998112016291}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2322267542698114637}
   StringsBanks:
   - {fileID: -8209092207714578416}
   cacheVersion: 131859
-  cacheTime: 639171271189171021
+  cacheTime: 639173094852390489
   SerializableEventsDict:
   - key: event:/sfx_door 2
     index: 0
-  - key: event:/wood_footsteps
-    index: 1
-  - key: event:/stone_jump
-    index: 2
   - key: event:/amb_tavern
-    index: 3
-  - key: event:/fireplace
-    index: 4
+    index: 1
+  - key: event:/Fireplace
+    index: 2
   - key: event:/sfx_door
-    index: 5
+    index: 3
   - key: event:/muzyka_las
-    index: 6
+    index: 4
   - key: event:/music_tavern
-    index: 7
+    index: 5
   - key: event:/amb_las
+    index: 6
+  - key: event:/Footsteps
+    index: 7
+  - key: event:/Landing
     index: 8
-  - key: event:/stone_footsteps
+  - key: event:/Jump
     index: 9
-  - key: event:/wood_jump
+  - key: snapshot:/Outside
     index: 10
-  - key: snapshot:/las
+  - key: snapshot:/Inside
     index: 11
-  - key: event:/wood_landing
-    index: 12
-  - key: event:/stone_landing
-    index: 13
---- !u!114 &425375485793814078
+--- !u!114 &1070871704879095963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -312,23 +279,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/wood_jump
+  m_Name: snapshot:/Outside
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/wood_jump
+  Path: snapshot:/Outside
   Guid:
-    Data1: 1646699011
-    Data2: 1272124246
-    Data3: -532926810
-    Data4: -621570698
+    Data1: 968958779
+    Data2: 1184199841
+    Data3: 1447193225
+    Data4: -694505594
   Banks:
   - {fileID: 2322267542698114637}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1327
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1982639998112016291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Inside
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/Inside
+  Guid:
+    Data1: -121558691
+    Data2: 1078755923
+    Data3: -667225189
+    Data4: 2051176343
+  Banks:
+  - {fileID: 2322267542698114637}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2322267542698114637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,12 +338,12 @@ MonoBehaviour:
   Path: fmod/Amb/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639171271189145375
+  lastModified: 639173094852365422
   FileSizes:
   - Name: Desktop
-    Value: 8829472
+    Value: 8939744
   Exists: 1
---- !u!114 &2571110061750997914
+--- !u!114 &3445674151842523741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,20 +353,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/stone_footsteps
+  m_Name: event:/Jump
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/stone_footsteps
+  Path: event:/Jump
   Guid:
-    Data1: -2121740034
-    Data2: 1325898093
-    Data3: -75201347
-    Data4: -1828666439
+    Data1: 911871205
+    Data2: 1303719572
+    Data3: -2023370583
+    Data4: 352137960
   Banks:
   - {fileID: 2322267542698114637}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -8373403062213188022}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -424,7 +419,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 2322267542698114637}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -440,9 +435,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/fireplace
+  m_Name: event:/Fireplace
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/fireplace
+  Path: event:/Fireplace
   Guid:
     Data1: -217360557
     Data2: 1329408111
@@ -484,3 +479,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1327
+--- !u!114 &8926088469279570165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Surface
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2521593892
+    data2: 2224747941
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Wood
+  - Stone
+  Exists: 1

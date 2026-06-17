@@ -14,7 +14,7 @@ public class Rooms : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Znajduje instancję RoomAmbient w scenie i ustawia flagę na true.
-            RoomAmbient roomAmbient = FindObjectOfType<RoomAmbient>();
+            RoomAmbient roomAmbient = Object.FindFirstObjectByType<RoomAmbient>();
             if (roomAmbient != null)
             {
                 roomAmbient.ambientActivated = true;
@@ -31,7 +31,7 @@ public class Rooms : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Znajduje instancję RoomAmbient w scenie i ustawia flagę na false.
-            RoomAmbient roomAmbient = FindObjectOfType<RoomAmbient>();
+            RoomAmbient roomAmbient = Object.FindFirstObjectByType<RoomAmbient>();
             if (roomAmbient != null)
             {
                 roomAmbient.ambientActivated = false;

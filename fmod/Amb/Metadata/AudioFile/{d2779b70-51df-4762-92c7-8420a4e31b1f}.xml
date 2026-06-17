@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{d2779b70-51df-4762-92c7-8420a4e31b1f}">
+		<property name="assetPath">
+			<value>walk4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.49968253968253967</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b1c7340b-8664-4a2d-aad6-ee3cf65cf4b1}</destination>
+		</relationship>
+	</object>
+</objects>

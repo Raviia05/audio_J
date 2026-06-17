@@ -19,7 +19,7 @@ public class Outside_foot_switch : MonoBehaviour
 
     void Start()
     {
-        distToGround = GetComponent<Collider>().bounds.extents.y;
+      distToGround = 1.0f;
     }
 
     void FixedUpdate()
@@ -34,10 +34,10 @@ public class Outside_foot_switch : MonoBehaviour
     {
         RaycastHit hit;
         // Wykonuje raycast, aby sprawdzić, co znajduje się pod graczem.
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 0.5f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 2.0f))
         {
             string tag = hit.collider.tag;
-            
+
             // Włącza snapshot, jeśli gracz jest na zewnątrz, a snapshot nie jest aktywny.
             if (tag == "Outside" && !snapshotActivated)
             {

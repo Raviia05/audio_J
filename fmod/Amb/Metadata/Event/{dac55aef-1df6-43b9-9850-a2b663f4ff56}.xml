@@ -5,7 +5,7 @@
 			<value>amb_las</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{86676ad8-6d14-4751-a523-16652b3cd353}</destination>
@@ -95,11 +95,17 @@
 		<property name="length">
 			<value>158</value>
 		</property>
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{fba3f79a-76af-480a-9df0-149bd23efd6f}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{9f883410-d65b-4099-9c2e-7b330f554dff}">
+		<property name="volume">
+			<value>-12</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -130,7 +136,6 @@
 	<object class="MixerBusEffectChain" id="{5028c308-1b7d-45f1-8891-eb6cf297a0ba}">
 		<relationship name="effects">
 			<destination>{dd412322-30f7-4209-b40d-8c0242f330e6}</destination>
-			<destination>{a5305276-b5e8-42cf-968b-e71c22f83063}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{96b9fe91-b5e8-4216-8a7a-2dd580444b31}" />
@@ -142,6 +147,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{2a0ed2ec-fe3f-4e83-ac69-4f579e3a630c}" />
 	<object class="MixerBusFader" id="{dd412322-30f7-4209-b40d-8c0242f330e6}" />
-	<object class="SpatialiserEffect" id="{a5305276-b5e8-42cf-968b-e71c22f83063}" />
 	<object class="MixerBusFader" id="{d3ca4e95-6d27-49be-938d-d47c6d19aef8}" />
 </objects>
