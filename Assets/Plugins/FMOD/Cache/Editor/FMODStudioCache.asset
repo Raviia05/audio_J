@@ -41,10 +41,10 @@ MonoBehaviour:
   Path: fmod/Amb/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639174759496771713
+  lastModified: 639175173442083073
   FileSizes:
   - Name: Desktop
-    Value: 1644
+    Value: 1690
   Exists: 1
 --- !u!114 &-6343781568871718967
 MonoBehaviour:
@@ -125,6 +125,33 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 8926088469279570165}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3605112094499497842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mice
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/mice
+  Guid:
+    Data1: 465003700
+    Data2: 1328733763
+    Data3: 186079414
+    Data4: 1891400460
+  Banks:
+  - {fileID: 2322267542698114637}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -237,13 +264,14 @@ MonoBehaviour:
   - {fileID: 3445674151842523741}
   - {fileID: 1070871704879095963}
   - {fileID: 1982639998112016291}
+  - {fileID: -3605112094499497842}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2322267542698114637}
   StringsBanks:
   - {fileID: -8209092207714578416}
   cacheVersion: 131859
-  cacheTime: 639174759496771713
+  cacheTime: 639175173442083073
   SerializableEventsDict:
   - key: event:/sfx_door 2
     index: 0
@@ -269,6 +297,8 @@ MonoBehaviour:
     index: 10
   - key: snapshot:/Inside
     index: 11
+  - key: event:/mice
+    index: 12
 --- !u!114 &1070871704879095963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,10 +368,10 @@ MonoBehaviour:
   Path: fmod/Amb/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639174759496741584
+  lastModified: 639175173442071991
   FileSizes:
   - Name: Desktop
-    Value: 8940256
+    Value: 9393280
   Exists: 1
 --- !u!114 &3445674151842523741
 MonoBehaviour:
@@ -494,7 +524,7 @@ MonoBehaviour:
   Name: Surface
   StudioPath: 
   Min: 0
-  Max: 1
+  Max: 3
   Default: 0
   ID:
     data1: 2521593892
@@ -504,4 +534,6 @@ MonoBehaviour:
   Labels:
   - Wood
   - Stone
+  - Stairs
+  - Bed
   Exists: 1
