@@ -41,7 +41,7 @@ MonoBehaviour:
   Path: fmod/Amb/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639175173442083073
+  lastModified: 639180587046240333
   FileSizes:
   - Name: Desktop
     Value: 1690
@@ -271,7 +271,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -8209092207714578416}
   cacheVersion: 131859
-  cacheTime: 639175173442083073
+  cacheTime: 639180587046240333
   SerializableEventsDict:
   - key: event:/sfx_door 2
     index: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   Path: fmod/Amb/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639175173442071991
+  lastModified: 639180587046230356
   FileSizes:
   - Name: Desktop
     Value: 9393280
